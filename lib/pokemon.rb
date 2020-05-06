@@ -10,7 +10,7 @@ def initialize(id:, name:, type:, db:)
 end
 
 def self.save(name,type, db)
-  DB[:conn].execute("INSERT INTO pokemon VALUES(?,?);", name, type)
+  db[:conn].execute("INSERT INTO pokemon VALUES(?,?);", name, type)
 end
 
 end
