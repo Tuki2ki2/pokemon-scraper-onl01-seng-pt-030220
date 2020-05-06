@@ -14,7 +14,9 @@ def self.save(name,type, db)
   db.execute("INSERT INTO pokemon (name, type) VALUES(?,?);", name, type)
 end
 
-def self.find(one, two)
+def self.find(id, db)
+  sql = <<-SQL
+  SELECT * FROm pokemon where id = ?
 end
 
 end
