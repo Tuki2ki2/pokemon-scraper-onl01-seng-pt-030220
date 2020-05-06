@@ -9,10 +9,7 @@ def initialize(id:, name:, type:, db:)
   @db = db
 end
 
-def self.save
-sql = <<-SQL
-SQL
-DB[:conn].execute(sql,"INSERT INTO pokemon(self.name, self.id, self.type, self.db) VALUES(?,?,?,?)")
+def self.save(name,type, db)
 end
 
 end
