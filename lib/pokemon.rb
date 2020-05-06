@@ -15,8 +15,7 @@ def self.save(name,type, db)
 end
 
 def self.find(id, db)
-  sql = <<-SQL
-  SELECT * FROm pokemon where id = ?
+db.execute("SELECT * FROM pokemon where id = ?";id)
 end
 
 end
